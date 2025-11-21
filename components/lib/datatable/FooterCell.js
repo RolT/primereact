@@ -59,7 +59,6 @@ export const FooterCell = React.memo((props) => {
                 while (prev) {
                     if (prev && prev.classList.contains('p-frozen-column')) {
                         left = DomHandler.getOuterWidth(prev) + parseFloat(prev.style.left || 0);
-                        elementRef.current.style.left = left + 'px';
                         break;
                     }
 
@@ -75,7 +74,7 @@ export const FooterCell = React.memo((props) => {
         }
     };
 
-    React.useEffect(() => {
+    React.useLayoutEffect(() => {
         if (getColumnProp('frozen')) {
             updateStickyPosition();
         }

@@ -523,7 +523,6 @@ export const BodyRow = React.memo((props) => {
                 while (prev) {
                     if (prev.classList.contains('p-frozen-column')) {
                         left = DomHandler.getOuterWidth(prev) + parseFloat(prev.style.left || 0);
-                        elementRef.current.style.left = left + 'px';
                         break;
                     }
 

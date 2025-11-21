@@ -887,7 +887,7 @@ export const TableBody = React.memo(
             onDragSelectionMouseUp();
         };
 
-        React.useEffect(() => {
+        React.useLayoutEffect(() => {
             if (props.frozenRow) {
                 updateFrozenRowStickyPosition();
             }

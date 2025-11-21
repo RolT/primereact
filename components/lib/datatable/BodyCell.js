@@ -321,7 +321,7 @@ export const Cell = (props) => {
         props.focusOnInit(initFocusTimeout, elementRef);
     };
 
-    React.useEffect(() => {
+    React.useLayoutEffect(() => {
         if (props.frozenCol) props.updateStickyPosition(elementRef, props.frozenCol, props.alignFrozenCol, styleObjectState, setStyleObjectState);
 
         if (props.editMode === 'cell' || props.editMode === 'row') props.focusOnElement(focusTimeout, editingState, elementRef, keyHelperRef);

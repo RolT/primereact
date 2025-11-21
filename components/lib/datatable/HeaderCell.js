@@ -259,7 +259,7 @@ export const HeaderCell = React.memo((props) => {
         }
     };
 
-    React.useEffect(() => {
+    React.useLayoutEffect(() => {
         if (getColumnProp('frozen')) {
             updateStickyPosition();
         }
